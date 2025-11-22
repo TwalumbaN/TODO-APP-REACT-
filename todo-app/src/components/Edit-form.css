@@ -1,0 +1,79 @@
+/*Container for the edit form*/
+.todo-input-grid {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 15px;
+  transition: all 0.2s ease;
+}
+
+.todo-input-grid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Inputs styling --- */
+.todo-input-grid input {
+  flex: 1;
+  min-width: 130px;
+  padding: 0.6rem 0.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.todo-input-grid input:focus {
+  border-color: #667eea;
+}
+
+/* --- Buttons styling --- */
+.update-todo-button{
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  color: #fff;
+}
+
+/* Update button */
+.update-todo-button {
+  background-color: #667eea;
+}
+
+.update-todo-button:hover {
+  background-color: #4b56e2;
+  transform: translateY(-1px);
+}
+
+/* Cancel button */
+.cancel-todo-btn {
+  background-color: #dc3545;
+}
+
+.cancel-todo-btn:hover {
+  background-color: #b71d2a;
+  transform: translateY(-1px);
+}
+
+/*Responsive layout*/
+@media (max-width: 700px) {
+  .todo-input-grid {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .update-todo-button{
+    width: 100%;
+  }
+}

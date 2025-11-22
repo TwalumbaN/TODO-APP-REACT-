@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #667eea 20%, #160724 45%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+#root {
+  width: 100%;
+  max-width: 1000px;
+}
+
+/*Main container for everything*/
+.todo-list-grid {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  color: black;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  gap: 20px;
+}
+
+/*Input form container*/
+.todo-input-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Individual input boxes */
+.todo-input-form input {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.6rem 0.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.todo-input-form input:focus {
+  border-color: #667eea;
+}
+
+/* Add button */
+.todo-input-form button {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.todo-input-form button:hover {
+  background-color: #333;
+}
+
+/* --- Each todo item container --- */
+.list-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 10px 15px;
+  gap: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+}
+
+.list-display:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/*Text inside each todo item*/
+.list-display p {
+  margin: 0;
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+  word-break: break-word;
+}
+
+p.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/*Buttons inside todo item*/
+.Edit-todo,
+.delete-todo-btn {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.Edit-todo {
+  background-color: #3b5be7;
+}
+
+.Edit-todo:hover {
+  background-color: #4b56e2;
+}
+
+.delete-todo-btn {
+  background-color: #dc3545;
+}
+
+.delete-todo-btn:hover {
+  background-color: #b71d2a;
+}
+
+/*Checkbox styling*/
+.list-display input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #0b0c0c;
+  cursor: pointer;
+}
