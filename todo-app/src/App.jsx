@@ -23,7 +23,7 @@ function App() {
     useEffect(() => {
         const fetchTodos = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/todos");
+                const response = await axios.get("https://todo-json-server-bk39.onrender.com/todos");
                 setTodos(response.data);
             } catch (error) {
                 window.alert("Error fetching todos: ", error);
@@ -40,7 +40,7 @@ function App() {
                 return window.alert('Please Fill in all fields before proceeding!')
               }
               setError('')
-              const response = await axios.post("http://localhost:5000/todos", {
+              const response = await axios.post("https://todo-json-server-bk39.onrender.com/todos", {
                 title,
                 dueDate,
                 description,
@@ -63,7 +63,8 @@ function App() {
     //Deleting todo item from the json server
     const deleteTodo = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/todos/${id}`);
+            await axios.delete(`https://todo-json-server.onrender.com/todos
+${id}`);
             setTodos(todos.filter((todo) => todo.id !== id));
         } catch (error) {
             setError("Error deleting the todo", error);
@@ -90,7 +91,8 @@ function App() {
     const toggleComplete = async (id, currentStatus) => {
         try {
             // Update the completion status on the json server
-            await axios.patch(`http://localhost:5000/todos/${id}`, {
+            await axios.patch(`https://todo-json-server.onrender.com/todos
+${id}`, {
             completed: !currentStatus,
         });
 

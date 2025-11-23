@@ -36,7 +36,8 @@ export const EditForm = (({editTodo, todo, cancelEdit}) => {
                 return window.alert("Nothing has changed, Please edit before clicking update")
             }
                               
-            const response = await axios.put(`http://localhost:5000/todos/${todo.id}`, 
+            const response = await axios.put(`https://todo-json-server.onrender.com/todos
+${todo.id}`, 
                 {
                     title: editName,
                     dueDate: editDate,
