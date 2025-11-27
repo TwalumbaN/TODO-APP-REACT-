@@ -63,8 +63,7 @@ function App() {
     //Deleting todo item from the json server
     const deleteTodo = async (id) => {
         try {
-            await axios.delete(`https://todo-json-server.onrender.com/todos
-${id}`);
+            await axios.delete(`https://todo-json-server-bk39.onrender.com/todos/${id}`);
             setTodos(todos.filter((todo) => todo.id !== id));
         } catch (error) {
             setError("Error deleting the todo", error);
